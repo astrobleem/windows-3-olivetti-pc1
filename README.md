@@ -14,4 +14,4 @@ These are repository-file downloads, not GitHub Release assets or installers. Th
 
 *86Box built from [commit ceb009f](https://github.com/86Box/86Box/commit/ceb009f17daeecbb81e1ddf26ad63beda9300afe) · emulated IBM XT (1986), 8088 at 4.77 MHz, 640 KB · Windows 3.0 real mode · Yamaha V6355D at B800h, 160×200×16. This shows the B800 emulator profile, not an Olivetti PC1 or physical hardware. See the [qualification record](https://github.com/astrobleem/oemdisplay-tandy/blob/main/docs/yamaha/QUALIFICATION.MD) and public [source baseline commit 212842c](https://github.com/astrobleem/oemdisplay-tandy/tree/212842cdd9c6877d8a01b00d8d6bc7e8e65f401a); the recorded candidate source commit is not in public Git history.*
 
-Physical PC1 operation, monitor output, RGB/SCART behavior, and Windows 3.1 remain unqualified. Some 160-pixel dialogs can clip. See the [canonical development repository](https://github.com/astrobleem/oemdisplay-tandy).
+Physical Olivetti PC1 operation, monitor output, and RGB/SCART behavior remain unqualified. Some 160-pixel dialogs can clip. See the [canonical development repository](https://github.com/astrobleem/oemdisplay-tandy).
