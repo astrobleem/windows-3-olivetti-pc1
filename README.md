@@ -4,7 +4,7 @@ This repository is a discoverability page for experimental Olivetti PC1 display-
 
 ## Current public status
 
-The canonical project's [Display modes section](https://github.com/astrobleem/oemdisplay-tandy#display-modes) says the Olivetti PC1 Yamaha candidates remain private and emulator-tested only. There is no public PC1 driver download or source packet at this time. This page does not claim physical-hardware compatibility.
+The canonical project's public releases contain no Olivetti PC1/Yamaha driver package. No public PC1 source packet or machine-specific emulator capture and qualification record was found, so this page makes no emulator or hardware support claim. There is no downloadable PC1 driver at this time.
 
 - [PR #137: current public availability and experimental-driver navigation](https://github.com/astrobleem/oemdisplay-tandy/pull/137)
 - [Canonical repository releases](https://github.com/astrobleem/oemdisplay-tandy/releases)
