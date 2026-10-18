@@ -17,4 +17,4 @@ This original capture is from source-built [86Box commit ceb009f](https://github
 
 The B800 Setup run used the original local packet with `CGA.GR2` and `CGALOGO.LGO` present. Those Windows support files are not published; any future OEM Setup package would require users to supply matching files from their own licensed Windows 3.0 installation/media. No reduced Candidate 03 package was tested end-to-end.
 
-Windows 3.1, physical PC1 operation, monitor output, and RGB/SCART behavior remain unqualified. The original eight-line XT Pixels fonts remain, so some 160-pixel dialogs can clip. See the [canonical Yamaha guide](https://github.com/astrobleem/oemdisplay-tandy/blob/main/experiments/YAMAHA/README.MD).
+The target is Windows 3.0 real mode. Physical PC1 operation, monitor output, and RGB/SCART behavior remain unqualified. The original eight-line XT Pixels fonts remain, so some 160-pixel dialogs can clip. See the [canonical Yamaha guide](https://github.com/astrobleem/oemdisplay-tandy/blob/main/experiments/YAMAHA/README.MD).
