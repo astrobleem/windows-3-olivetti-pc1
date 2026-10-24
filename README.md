@@ -1,17 +1,41 @@
-# Windows 3.0 Yamaha display experiments for Olivetti PC1
+# Yamaha V6355D and Olivetti PC1 display drivers
 
-Experimental Windows 3.0 real-mode Yamaha V6355D profiles are available from the canonical [oemdisplay-tandy project](https://github.com/astrobleem/oemdisplay-tandy):
+Choose the profile for your hardware. Both use Windows 3.0 real mode,
+640 KB and a 160x200, 16-color desktop. They have no automatic detection
+and are not interchangeable:
 
-- [Download PC1/B000 Candidate 03](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/PC1-B000-CANDIDATE03.ZIP) — `PC1YAMA.DRV`, 160×200×16
-- [Download standalone B800 Candidate 03](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/YAMAHA-B800-CANDIDATE03.ZIP) — `YAM160.DRV`, 160×200×16
-- [Source and evidence archive](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/YAMAHA-CANDIDATE03-SOURCE-EVIDENCE.ZIP)
+- **Olivetti Prodest PC1, B000h:** [download PC1-B000-CANDIDATE03.ZIP](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/PC1-B000-CANDIDATE03.ZIP).
+  This uses `PC1YAMA.DRV`.
+- **Standalone Yamaha V6355D, B800h emulator profile:** [download YAMAHA-B800-CANDIDATE03.ZIP](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/YAMAHA-B800-CANDIDATE03.ZIP).
+  This uses `YAM160.DRV`.
 
-These are repository-file downloads, not GitHub Release assets or installers. The PC1/B000 profile has build and host checks only; no Windows Setup, emulator, or physical PC1 run is recorded. Do not treat it as qualified. For either package, follow its included README and the [Yamaha install and recovery guide](https://github.com/astrobleem/oemdisplay-tandy/blob/main/experiments/YAMAHA/README.MD) in a disposable Windows 3.0 clone. The Setup profiles need `CGA.GR2` and `CGALOGO.LGO` from your own licensed Windows media; neither file is included. The reduced B800 package has not been tested end-to-end.
+## Install
 
-## Emulator screenshot
+1. Extract your chosen ZIP to a DOS folder, for example `C:\YAMAHA`.
+2. Copy matching **CGA.GR2** and **CGALOGO.LGO** from your Windows 3.0
+   installation or media into that folder. They may be in `C:\WINDOWS\SYSTEM`
+   or `C:\WINDOWS`. These required support files are not included, and there
+   is no staging helper for these packets.
+3. Exit Windows completely. From plain DOS, select your Windows drive,
+   change to its directory and run `SETUP`. Choose **Display / Other**,
+   enter `C:\YAMAHA`, and select the label matching the ZIP:
+   **EXPERIMENTAL Olivetti PC1 160x200x16** or
+   **EXPERIMENTAL Yamaha B800 EMULATOR ONLY**. Complete Changes.
+4. From your Windows directory, start with `WIN /R`. Use ordinary Windows
+   startup; the Tandy launcher and RESERVE helper are for different hardware.
 
-![Original 86Box screenshot: Windows 3.0 real mode on an emulated IBM XT (1986), standalone Yamaha V6355D B800h profile, 160×200×16](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/docs/yamaha/YAMAHA03.JPG)
+To change back, exit to plain DOS and use Windows Setup to select your
+previous display.
 
-*86Box built from [commit ceb009f](https://github.com/86Box/86Box/commit/ceb009f17daeecbb81e1ddf26ad63beda9300afe) · emulated IBM XT (1986), 8088 at 4.77 MHz, 640 KB · Windows 3.0 real mode · Yamaha V6355D at B800h, 160×200×16. This shows the B800 emulator profile, not an Olivetti PC1 or physical hardware. See the [qualification record](https://github.com/astrobleem/oemdisplay-tandy/blob/main/docs/yamaha/QUALIFICATION.MD) and public [source baseline commit 212842c](https://github.com/astrobleem/oemdisplay-tandy/tree/212842cdd9c6877d8a01b00d8d6bc7e8e65f401a); the recorded candidate source commit is not in public Git history.*
+## Known limits and technical details
 
-Physical Olivetti PC1 operation, monitor output, and RGB/SCART behavior remain unqualified. Some 160-pixel dialogs can clip. See the [canonical development repository](https://github.com/astrobleem/oemdisplay-tandy).
+PC1/B000 has build and host checks only; Windows runtime and Setup remain
+untested. B800 has a separate 86Box Windows screenshot and DOSBox-X API/VRAM
+tests. The reduced public B800 packet has not been tested end to end through
+Setup. Neither profile has physical PC1 or RGB/SCART qualification. At 160
+pixels, some dialogs clip.
+
+[B800 screenshot](https://github.com/astrobleem/oemdisplay-tandy/blob/main/docs/yamaha/YAMAHA03.JPG) ·
+[Detailed test scope](https://github.com/astrobleem/oemdisplay-tandy/blob/main/docs/yamaha/QUALIFICATION.MD) ·
+[Source and evidence archive](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/YAMAHA-CANDIDATE03-SOURCE-EVIDENCE.ZIP).
+Component notices remain in each packet.
