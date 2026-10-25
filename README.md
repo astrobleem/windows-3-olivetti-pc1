@@ -4,9 +4,9 @@ Choose the profile for your hardware. Both use Windows 3.0 real mode,
 640 KB and a 160x200, 16-color desktop. They have no automatic detection
 and are not interchangeable:
 
-- **Olivetti Prodest PC1, B000h:** [download PC1-B000-CANDIDATE03.ZIP](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/PC1-B000-CANDIDATE03.ZIP).
+- **Olivetti Prodest PC1, B000h:** [download the PC1 driver](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/PC1-B000-CANDIDATE03.ZIP).
   This uses `PC1YAMA.DRV`.
-- **Standalone Yamaha V6355D, B800h emulator profile:** [download YAMAHA-B800-CANDIDATE03.ZIP](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/YAMAHA-B800-CANDIDATE03.ZIP).
+- **Standalone Yamaha V6355D, B800h emulator profile:** [download the standalone Yamaha driver](https://raw.githubusercontent.com/astrobleem/oemdisplay-tandy/main/downloads/experimental/yamaha-candidate03/YAMAHA-B800-CANDIDATE03.ZIP).
   This uses `YAM160.DRV`.
 
 ## Install
